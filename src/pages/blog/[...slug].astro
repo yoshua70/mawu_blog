@@ -1,6 +1,7 @@
 ---
-import Layout from "../../layouts/Blog.Layout.astro";
+import Layout from "../../layouts/MDXPost.Layout.astro";
 import { getCollection } from "astro:content";
+
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
   return blogEntries.map((entry) => ({
@@ -13,7 +14,10 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title}>
-  <a href="/blog">back to blog</a>
+<Layout
+  title={entry.data.title}
+  author={entry.data.author}
+  description={entry.data.description}
+>
   <Content />
 </Layout>
