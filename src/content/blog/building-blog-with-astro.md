@@ -4,4 +4,21 @@ title: 'Building my Blog with Astro'
 
 # Building my blog with astro
 
-This is astro.
+## Creating the project
+Create a project using astro:
+
+```bash
+$ npm create astro@latest
+```
+
+Terminal output (WSL on Windows 11 (not activated : )):
+
+<img src="/blog/building_my_blog_with_astro/terminal_output_create_astro.png" alt="Terminal output of create astro@latest.">
+
+Very fast.
+
+## Setting up a github repo.
+
+## Deploying with vercel
+<img src="/blog/building_my_blog_with_astro/vercel_dashboard.png" alt="Vercel dashboard.">
+<img src="/blog/building_my_blog_with_astro/vercel_deployments.png" alt="Vercel deployments.">
