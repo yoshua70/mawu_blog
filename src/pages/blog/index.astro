@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+
+const allBlogPosts = await getCollection("blog");
+---
+
+<Layout title="the blog">
+  <main>
+    <a href="/">Back home</a>
+    <h1>the <span class="text-gradient">blog</span></h1>
+    {
+      allBlogPosts.length == 0 ? (
+        <p class="empty-message">feeling empty : (</p>
+      ) : (
+        <ul>
+          {allBlogPosts.map((blogPost) => (
+            <li>
+              <a href={`/blog/${blogPost.slug}`}>{blogPost.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </main>
+</Layout>
+
+<style>
+  .empty-message {
+    color: #adadad;
+    font-style: italic;
+  }
+</style>
