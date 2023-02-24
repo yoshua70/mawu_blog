@@ -1,5 +1,7 @@
 ---
 title: 'Building my Blog with Astro'
+author: 'mawu'
+description: 'Try to migrate from markdown to MDX'
 ---
 
 # Building my blog with astro
